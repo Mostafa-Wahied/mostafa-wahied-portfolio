@@ -21,11 +21,11 @@ function Header() {
     return (
         <AppBar
             position="static"
-            sx={{ width: "100%", boxShadow: 'none', backgroundColor: 'transparent', color: 'black' }}
+            sx={{ width: "100%", boxShadow: 'none', backgroundColor: 'transparent', color: 'black', pt: 3, paddingX: {sx: 0, sm: 4} }}
             elevation={0}
         >
             <Container
-            // maxWidth="xl"
+            maxWidth="xl"
             >
                 <Toolbar disableGutters sx={{ paddingLeft: 0, paddingRight: 0, width: "100%" }}>
                     <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
