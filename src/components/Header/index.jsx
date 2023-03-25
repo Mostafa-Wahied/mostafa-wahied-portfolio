@@ -2,6 +2,8 @@ import * as React from 'react';
 import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar, Button, Tooltip, MenuItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import AdbIcon from '@mui/icons-material/Adb';
+import logo from '../../assets/mw-logo.png';
+
 
 const pages = ['Home', 'About', 'Projects', 'Contact'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
@@ -21,31 +23,26 @@ function Header() {
     return (
         <AppBar
             position="static"
-            sx={{ width: "100%", boxShadow: 'none', backgroundColor: 'transparent', color: 'black', pt: 3, paddingX: {sx: 0, sm: 4} }}
+            sx={{
+                width: "100%",
+                boxShadow: 'none',
+                backgroundColor: 'transparent',
+                color: 'black',
+                pt: 3,
+                paddingX: { sx: 0, sm: 4 },
+                fontFamily: 'Montserrat',
+            }}
             elevation={0}
         >
             <Container
-            maxWidth="xl"
+                maxWidth="xl"
             >
-                <Toolbar disableGutters sx={{ paddingLeft: 0, paddingRight: 0, width: "100%" }}>
-                    <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
-                    <Typography
-                        variant="h6"
-                        noWrap
-                        component="a"
-                        href="/"
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'none', md: 'flex' },
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        LOGO
-                    </Typography>
+                <Toolbar disableGutters sx={{ paddingLeft: 0, paddingRight: 0, width: "100%", }}>
+                    <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
+                        <a href="/">
+                            <img src={logo} alt="Logo" border="0" width="60px" height="60px" />
+                        </a>
+                    </Box>
                     {/* smaller screens menu */}
                     <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
                         <IconButton
@@ -78,39 +75,26 @@ function Header() {
                         >
                             {pages.map((page) => (
                                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center">{page}</Typography>
+                                    <Typography textAlign="center" sx={{ fontFamily: 'Montserrat' }}>
+                                        {page}
+                                    </Typography>
                                 </MenuItem>
                             ))}
                         </Menu>
                     </Box>
                     {/* icon for smaller screens */}
-                    <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
-                    {/* logo for smaller screens */}
-                    <Typography
-                        variant="h5"
-                        noWrap
-                        component="a"
-                        href=""
-                        sx={{
-                            mr: 2,
-                            display: { xs: 'flex', md: 'none' },
-                            flexGrow: 1,
-                            fontFamily: 'monospace',
-                            fontWeight: 700,
-                            letterSpacing: '.3rem',
-                            color: 'inherit',
-                            textDecoration: 'none',
-                        }}
-                    >
-                        LOGO
-                    </Typography>
+                    <Box sx={{ display: { xs: 'md', md: 'none' }, mr: 1 }}>
+                        <a href="/">
+                            <img src={logo} alt="Logo" border="0" width="60px" height="60px" />
+                        </a>
+                    </Box>
 
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
                         {pages.map((page) => (
                             <Button
                                 key={page}
                                 onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'black', display: 'block' }}
+                                sx={{ my: 2, color: 'black', display: 'block', fontFamily: 'Montserrat' }}
                             >
                                 {page}
                             </Button>
