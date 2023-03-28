@@ -73,9 +73,6 @@ const Hero = () => {
 
                     </Grid>
                 </Grid>
-                <Box sx={{ display: 'flex', justifyContent: 'center' }} >
-                    <ScrollDown />
-                </Box>
             </Container>
         </>
 

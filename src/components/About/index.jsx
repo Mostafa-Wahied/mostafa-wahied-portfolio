@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { Box, Container, Grid, Typography, useMediaQuery } from '@mui/material'
 import Spline from '@splinetool/react-spline';
 import "./index.css"
+import ScrollDown from '../ScrollDown';
 const gradient = 'linear-gradient(to right, #121FCF 0%, #CF1512 100%)';
 
 const About = ({ scrolledToAbout }) => {
@@ -87,6 +88,9 @@ const About = ({ scrolledToAbout }) => {
                     </Grid>
                 </Grid>
             </Container>
+            <Box sx={{ display: 'flex', justifyContent: 'center' }} >
+                <ScrollDown />
+            </Box>
         </Box>
 
     )
