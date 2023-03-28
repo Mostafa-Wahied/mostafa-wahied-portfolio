@@ -26,7 +26,7 @@ const Home = () => {
     return (
         <>
             <Box sx={{
-                backgroundImage: '#fefefe', minHeight: '100vh',
+                backgroundColor: '#F2F7FB', minHeight: '100vh',
                 fontFamily: 'Montserrat',
             }}>
                 <Header />

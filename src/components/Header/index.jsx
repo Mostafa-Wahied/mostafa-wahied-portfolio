@@ -25,7 +25,7 @@ function Header() {
             position="sticky"
             sx={{
                 width: "100%",
-                boxShadow: 'none',
+                // boxShadow: 'none',
                 backgroundColor: '#fefefe',
                 color: 'black',
                 pt: 2,

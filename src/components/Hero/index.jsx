@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { Box, Container, Grid, Typography, useMediaQuery, Button } from '@mui/material';
 import HeroButton from '../HeroButton';
 import portfolioImage from '../../assets/original.jpg';
-import ScrollDown from '../ScrollDown';
 import "./index.css"
 
 const gradient = 'linear-gradient(to right, #121FCF 0%, #CF1512 100%)';
@@ -21,7 +20,7 @@ const Hero = () => {
             }}
                 maxWidth
             >
-                <Grid container columnSpacing={20} sx={{ pt: { xs: 3, md: 25 } }}>
+                <Grid container columnSpacing={20} sx={{ pt: { xs: 0, md: 25 } }}>
                     <Grid item xs={12} md={7} sx={{ textAlign: { xs: 'center', md: 'left' }, marginTop: { xs: 5, md: -5 } }}>
                         <Box>
                             <Typography
