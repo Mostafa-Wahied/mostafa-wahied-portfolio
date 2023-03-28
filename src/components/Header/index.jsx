@@ -1,16 +1,16 @@
-import * as React from 'react';
+import React, { useState, useEffect } from 'react';
 import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar, Button, Tooltip, MenuItem } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
-import AdbIcon from '@mui/icons-material/Adb';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import DescriptionIcon from '@mui/icons-material/Description';
 import logo from '../../assets/mw-logo.png';
 
 
 const pages = ['Home', 'About', 'Projects', 'Contact'];
-const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
 
 function Header() {
-    const [anchorElNav, setAnchorElNav] = React.useState(null);
-    const [anchorElUser, setAnchorElUser] = React.useState(null);
+    const [anchorElNav, setAnchorElNav] = useState(null);
 
     const handleOpenNavMenu = (event) => {
         setAnchorElNav(event.currentTarget);
@@ -22,21 +22,19 @@ function Header() {
 
     return (
         <AppBar
-            position="static"
+            position="sticky"
             sx={{
                 width: "100%",
                 boxShadow: 'none',
-                backgroundColor: 'transparent',
+                backgroundColor: '#fefefe',
                 color: 'black',
-                pt: 3,
+                pt: 2,
                 paddingX: { sx: 0, sm: 4 },
                 fontFamily: 'Montserrat',
             }}
             elevation={0}
         >
-            <Container
-                maxWidth="xl"
-            >
+            <Container maxWidth>
                 <Toolbar disableGutters sx={{ paddingLeft: 0, paddingRight: 0, width: "100%", }}>
                     <Box sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }}>
                         <a href="/">
@@ -73,63 +71,67 @@ function Header() {
                                 display: { xs: 'block', md: 'none' },
                             }}
                         >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                                    <Typography textAlign="center" sx={{ fontFamily: 'Montserrat' }}>
-                                        {page}
-                                    </Typography>
-                                </MenuItem>
-                            ))}
+                            <MenuItem onClick={handleCloseNavMenu}>
+                                <IconButton
+                                    size="large"
+                                    aria-label="GitHub"
+                                    onClick={() => window.open('https://github.com/Mostafa-Wahied', '_blank')}
+                                >
+                                    <GitHubIcon />
+                                </IconButton>
+                            </MenuItem>
+                            <MenuItem onClick={handleCloseNavMenu}>
+                                <IconButton
+                                    size="large"
+                                    aria-label="LinkedIn"
+                                    onClick={() => window.open('https://www.linkedin.com/in/mostafa-wahied-seattle/', '_blank')}
+                                >
+                                    <LinkedInIcon />
+                                </IconButton>
+                            </MenuItem>
+                            <MenuItem onClick={handleCloseNavMenu}>
+                                <IconButton
+                                    size="large"
+                                    aria-label="Resume"
+                                    onClick={() => window.open('https://docs.google.com/document/d/1_lK_VUy20syt8nbd04T3VDXdAhX7--J5/edit?usp=sharing&ouid=108483175537272506859&rtpof=true&sd=true', '_blank')}
+                                >
+                                    <DescriptionIcon />
+                                </IconButton>
+                            </MenuItem>
                         </Menu>
                     </Box>
-                    {/* icon for smaller screens */}
+                    {/* Logo for smaller screens */}
                     <Box sx={{ display: { xs: 'md', md: 'none' }, mr: 1 }}>
                         <a href="/">
                             <img src={logo} alt="Logo" border="0" width="60px" height="60px" />
                         </a>
                     </Box>
 
-                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
-                        {pages.map((page) => (
-                            <Button
-                                key={page}
-                                onClick={handleCloseNavMenu}
-                                sx={{ my: 2, color: 'black', display: 'block', fontFamily: 'Montserrat' }}
-                            >
-                                {page}
-                            </Button>
-                        ))}
+                    {/* Bigger screen icons */}
+                    <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', gap: 50 }, justifyContent: 'flex-end' }}>
+                        <IconButton
+                            size="large"
+                            aria-label="GitHub"
+                            onClick={() => window.open('https://github.com/Mostafa-Wahied', '_blank')}
+                        >
+                            <GitHubIcon />
+                        </IconButton>
+                        <IconButton
+                            size="large"
+                            aria-label="LinkedIn"
+                            onClick={() => window.open('https://www.linkedin.com/in/mostafa-wahied-seattle/', '_blank')}
+                        >
+                            <LinkedInIcon />
+                        </IconButton>
+                        <IconButton
+                            size="large"
+                            aria-label="Resume"
+                            onClick={() => window.open('https://docs.google.com/document/d/1_lK_VUy20syt8nbd04T3VDXdAhX7--J5/edit?usp=sharing&ouid=108483175537272506859&rtpof=true&sd=true', '_blank')}
+                        >
+                            <DescriptionIcon />
+                        </IconButton>
                     </Box>
 
-                    {/* <Box sx={{ flexGrow: 0 }}>
-                        <Tooltip title="Open settings">
-                            <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                                <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-                            </IconButton>
-                        </Tooltip>
-                        <Menu
-                            sx={{ mt: '45px' }}
-                            id="menu-appbar"
-                            anchorEl={anchorElUser}
-                            anchorOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            keepMounted
-                            transformOrigin={{
-                                vertical: 'top',
-                                horizontal: 'right',
-                            }}
-                            open={Boolean(anchorElUser)}
-                            onClose={handleCloseUserMenu}
-                        >
-                            {settings.map((setting) => (
-                                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                                    <Typography textAlign="center">{setting}</Typography>
-                                </MenuItem>
-                            ))}
-                        </Menu>
-                    </Box> */}
                 </Toolbar>
             </Container>
         </AppBar>

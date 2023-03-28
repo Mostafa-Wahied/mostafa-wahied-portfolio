@@ -1,0 +1,31 @@
+.home__scroll {}
+
+.mouse {
+    animation: scroll 2s ease infinite;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateY(-14rem);
+    }
+
+    50% {
+        transform: translateY(-9rem);
+    }
+
+    100% {
+        transform: translateY(-14rem);
+    }
+}
+
+
+.home__scroll {
+}
+
+
+.home__scroll-name {
+    /* font-family: 'Montserrat';
+    font-size: 0.7;
+    font-weight: 300; */
+    color: black;
+}
