@@ -5,6 +5,7 @@ import { Box } from '@mui/material'
 import Hero from '../../components/Hero';
 import About from '../../components/About';
 import { Element, scroller } from 'react-scroll'
+import Projects from '../../components/Projects';
 
 const Home = () => {
     const [scrolledToAbout, setScrolledToAbout] = useState(false)
@@ -34,9 +35,7 @@ const Home = () => {
                 <Element name="about">
                     <About scrolledToAbout={scrolledToAbout} />
                 </Element>
-                <Hero />
-                <Hero />
-                <Hero />
+                <Projects />
                 <Footer />
             </Box>
         </>
