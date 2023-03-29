@@ -1,6 +1,8 @@
 import { Button } from '@mui/material';
 import React, { useState } from 'react'
 
+const gradient2 = 'linear-gradient(45deg, #12c2e9, #c471ed, #f64f59)';
+
 function HeroButton({ label, id, bg, rightBorderWidth }) {
     const [hovered, setHovered] = useState(false);
 
@@ -9,9 +11,10 @@ function HeroButton({ label, id, bg, rightBorderWidth }) {
 
 
     const handleNavClick = (id) => {
-        console.log("Clicked")
         const element = document.getElementById(id);
-        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        const yOffset = -100; // adjust this value to change the scroll position
+        const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+        window.scrollTo({ top: y, behavior: 'smooth' });
     }
     return (
         <>
@@ -27,12 +30,12 @@ function HeroButton({ label, id, bg, rightBorderWidth }) {
                     borderBottomWidth: '2px',
                     borderLeftWidth: '2px',
                     borderStyle: 'solid',
-                    borderColor: '#121FCF',
+                    borderColor: '#12c2e9',
                     position: 'relative',
                     overflow: 'hidden',
                     borderRadius: '0px',
-                    padding: { xs: "2px 15px", sm: "3px 15px", lg: '3px 35px' },
-                    color: '#121FCF',
+                    padding: { xs: "0px 15px", sm: "0px 15px", lg: '0px 35px' },
+                    color: '#12c2e9',
                     opacity: 0.9,
                     transition: 'all 0.3s ease',
                     '&::before': {

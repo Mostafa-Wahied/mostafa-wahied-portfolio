@@ -5,6 +5,7 @@ import portfolioImage from '../../assets/original.jpg';
 import "./index.css"
 
 const gradient = 'linear-gradient(to right, #121FCF 0%, #CF1512 100%)';
+const gradient2 = 'linear-gradient(45deg, #12c2e9, #c471ed, #f64f59)';
 
 const Hero = () => {
     const [loading, setLoading] = useState(true);
@@ -35,7 +36,7 @@ const Hero = () => {
                             <Typography
                                 variant={{ xs: 'h3', md: 'h2' }}
                                 sx={{
-                                    backgroundImage: gradient,
+                                    backgroundImage: gradient2,
                                     WebkitBackgroundClip: 'text',
                                     WebkitTextFillColor: 'transparent',
                                     fontSize: { xs: '2.2rem', md: '4rem' },
@@ -47,7 +48,8 @@ const Hero = () => {
                             <Typography
                                 variant={{ xs: 'h4', md: 'h3' }}
                                 sx={{
-                                    display: 'block', fontSize: { xs: '1.6rem', md: '2.2rem' },
+                                    display: 'block',
+                                    fontSize: { xs: '1.6rem', md: '2.2rem' },
                                     marginTop: { xs: 0, md: -1 },
                                     lineHeight: 1.3
                                 }}
@@ -56,9 +58,9 @@ const Hero = () => {
                             </Typography>
                         </Box>
                         <Box sx={{ marginTop: 3 }}>
-                            <HeroButton id="about" label="About" bg={gradient} />
-                            <HeroButton id="projects" label="Projects" bg={gradient} />
-                            <HeroButton id="contact" label="Contact" bg={gradient} rightBorderWidth="2px" />
+                            <HeroButton id="about" label="About" bg={gradient2} />
+                            <HeroButton id="projects" label="Projects" bg={gradient2} />
+                            <HeroButton id="contact" label="Contact" bg={gradient2} rightBorderWidth="2px" />
                         </Box>
                     </Grid>
 
