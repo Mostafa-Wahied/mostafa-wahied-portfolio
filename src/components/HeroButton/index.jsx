@@ -14,7 +14,9 @@ function HeroButton({ label, id, bg, rightBorderWidth }) {
         const element = document.getElementById(id);
         const yOffset = -100; // adjust this value to change the scroll position
         const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
-        window.scrollTo({ top: y, behavior: 'smooth' });
+        window.scrollTo({
+            top: y, behavior: 'smooth'
+        });
     }
     return (
         <>

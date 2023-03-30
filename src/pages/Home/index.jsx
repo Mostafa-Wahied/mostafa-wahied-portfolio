@@ -24,9 +24,6 @@ const Home = () => {
                     <About />
                 </Element>
                 <Projects />
-                <Element name="aboutCOPY">
-                    <AboutCOPY />
-                </Element>
                 <Hero />
                 <Footer />
             </Box>

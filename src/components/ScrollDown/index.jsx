@@ -2,6 +2,13 @@ import { Box, Button, Typography } from '@mui/material'
 import React from 'react'
 import ArrowDownwardIcon from '@mui/icons-material/ArrowDownward';
 
+const handleScrollClick = () => {
+    const element = document.getElementById("about");
+    const yOffset = -100; // adjust this value to change the scroll position
+    const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+    window.scrollTo({ top: y, behavior: 'smooth' });
+}
+
 function ScrollDown() {
     return (
         <Box className='home__scroll'
@@ -10,7 +17,8 @@ function ScrollDown() {
                 bottom: '0',
             }}
         >
-            <Button href="#about" className='home__scroll-button--flex'
+            <Button className='home__scroll-button--flex'
+                onClick={() => handleScrollClick()}
                 sx={{
                     '&:hover': { backgroundColor: 'transparent' },
                 }}

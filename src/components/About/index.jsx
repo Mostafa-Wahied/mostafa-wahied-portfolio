@@ -4,6 +4,8 @@ import Spline from '@splinetool/react-spline';
 import "./index.css"
 import ScrollDown from '../ScrollDown';
 import codeBG from '../../assets/code-bg-edited.png';
+import { motion } from 'framer-motion'
+import { fadeIn, textVariant, staggerContainer, zoomIn, slideIn } from '../../utils/motion.js'
 
 const About = () => {
     const [scrolledToAbout, setScrolledToAbout] = useState(false)
@@ -42,129 +44,143 @@ const About = () => {
 
     return (
         <>
-            <Box
-                id="about"
-                sx={{
-                    transform: `scale(${scale})`,
-                    backgroundColor: '#000000',
-                    backgroundImage: `url(${codeBG})`,
-                    backgroundSize: '50%',
-                    backgroundPosition: 'center',
-                    backgroundRepeat: 'no-repeat',
-                    transition: 'all 0.5s ease-out',
-                    margin: '0 auto',
-                    padding: { xs: "10px", md: '50px' },
-                    borderRadius: `${borderRadius}px`,
-                    fontFamily: 'Montserrat',
-                    marginTop: 0,
-                    height: { xs: '100vh', md: '100vh' },
-                }}
+            <motion.section
+                variants={staggerContainer()}
+                initial='hidden'
+                whileInView="show"
+                viewport={{ once: true, amount: 0.25 }}
+
             >
-                <Container sx={{
-                    paddingX: { sx: 0, md: 8 },
-                    fontFamily: 'Montserrat',
-                }}
-                    maxWidth
+                <Box
+                    id="about"
+                    sx={{
+                        transform: `scale(${scale})`,
+                        backgroundColor: '#000000',
+                        backgroundImage: `url(${codeBG})`,
+                        backgroundSize: '50%',
+                        backgroundPosition: 'center',
+                        backgroundRepeat: 'no-repeat',
+                        transition: 'all 0.5s ease-out',
+                        margin: '0 auto',
+                        padding: { xs: "10px", md: '50px' },
+                        borderRadius: `${borderRadius}px`,
+                        fontFamily: 'Montserrat',
+                        marginTop: 0,
+                        height: { xs: '100vh', md: '100vh' },
+                    }}
                 >
-                    <Typography
-                        variant={{ xs: 'h3', md: 'h2' }}
-                        sx={{
-                            display: "flex",
-                            justifyContent: "center",
-                            fontSize: { xs: '2.2rem', md: '4rem' },
-                            fontFamily: 'monospace',
-                            fontWeight: '500',
-                            color: '#F2F7FB',
-                            textTransform: 'uppercase',
-                            position: 'relative',
-                            top: { xs: 30, md: 35 },
-                        }}
+                    <Container sx={{
+                        paddingX: { sx: 0, md: 20 },
+                        fontFamily: 'Montserrat',
+                    }}
+                        maxWidth
                     >
-                        Tech Stack
-                    </Typography>
-                    <Grid container columnSpacing={0} sx={{ pt: { xs: 0, md: 29 }, gap: { xs: 3, sm: 0 } }}>
-                        <Grid item xs={12} md={6} sx={{ textAlign: { xs: 'center', md: 'left' }, marginTop: { xs: 5, md: 0 } }}>
-                            <Box>
-                                <Typography
 
-                                >
-                                    <Grid container direction="row" alignItems="center">
-                                        <Grid item>
-                                            <Typography variant="h5"
-                                                sx={{
-                                                    fontSize: { xs: '1rem', md: '1.2rem' },
-                                                    color: 'white',
-                                                    position: "relative",
-                                                    right: 20,
-                                                    opacity: 0.22,
-                                                    fontFamily: "monospace",
-                                                }}
-                                            >
-                                                &lt;h3&gt;
-                                            </Typography>
-                                        </Grid>
-                                        <Grid item>
-                                            <Typography
-                                                variant={{ xs: 'h4', md: 'h3' }}
-                                                sx=
-                                                {{
-                                                    display: 'block',
-                                                    fontSize: { xs: '1rem', md: '1.3rem' },
-                                                    color: '#F2F7FB',
-                                                    fontFamily: 'Montserrat',
-                                                }}
-                                            >
-                                                I am a Full Stack Developer with a focus on backend development, leveraging my expertise in building scalable and performant applications.
-                                            </Typography>
-                                        </Grid>
-                                        <Grid item>
-                                            <Typography variant="h5" sx={{
-                                                fontSize: { xs: '1rem', md: '1.2rem' },
-                                                color: 'white',
-                                                position: "relative",
-                                                right: 20,
-                                                opacity: 0.22,
-                                                fontFamily: "monospace",
-                                            }}>
-                                                &lt;/h3&gt;
-                                            </Typography>
-                                        </Grid>
-                                    </Grid>
-                                </Typography>
-                            </Box>
+                        <Grid container columnSpacing={0} sx={{ pt: { xs: 0, md: 29 }, gap: { xs: 3, sm: 0 } }}>
+                            <Grid item xs={12} md={6} sx={{ textAlign: { xs: 'center', md: 'left' }, marginTop: { xs: 5, md: 0 } }}>
+                                <Box>
+                                    <motion.div variants={textVariant(0.5)}>
+                                        <Typography
+                                            variant={{ xs: 'h3', md: 'h2' }}
+                                            sx={{
+                                                fontSize: { xs: '2.2rem', md: '3.5rem' },
+                                                fontFamily: "Montserrat",
+                                                fontWeight: '500',
+                                                color: '#F2F7FB',
+                                                textTransform: 'uppercase',
+                                                // position: 'relative',
+                                                // top: { xs: 30, md: 240 },
+                                            }}
+                                        >
+                                            Tech Stack
+                                        </Typography>
+                                    </motion.div>
+                                    <motion.div variants={textVariant(0.75)}>
+
+                                        <Typography>
+                                            <Grid container direction="row" alignItems="center">
+                                                <Grid item>
+                                                    <Typography variant="h5"
+                                                        sx={{
+                                                            fontSize: { xs: '1rem', md: '1.2rem' },
+                                                            color: 'white',
+                                                            position: "relative",
+                                                            right: 20,
+                                                            opacity: 0.26,
+                                                            fontFamily: "monospace",
+                                                        }}
+                                                    >
+                                                        &lt;h3&gt;
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid item>
+                                                    <Typography
+                                                        variant={{ xs: 'h4', md: 'h3' }}
+                                                        sx=
+                                                        {{
+                                                            display: 'block',
+                                                            fontSize: { xs: '1rem', md: '1.3rem' },
+                                                            color: '#F2F7FB',
+                                                            fontFamily: 'Montserrat',
+                                                        }}
+                                                    >
+                                                        I am a Full Stack Developer with a focus on backend development, leveraging my expertise in building scalable and performant applications.
+                                                    </Typography>
+                                                </Grid>
+                                                <Grid item>
+                                                    <Typography variant="h5" sx={{
+                                                        fontSize: { xs: '1rem', md: '1.2rem' },
+                                                        color: 'white',
+                                                        position: "relative",
+                                                        right: 20,
+                                                        opacity: 0.26,
+                                                        fontFamily: "monospace",
+                                                    }}>
+                                                        &lt;/h3&gt;
+                                                    </Typography>
+                                                </Grid>
+                                            </Grid>
+                                        </Typography>
+                                    </motion.div>
+                                </Box>
+
+                            </Grid>
+
+
+                            <Grid item xs={12} md={6} sx={{ marginTop: { xs: 0, md: -20 }, paddingLeft: { sm: 0, md: 5 } }}>
+
+                                <motion.div variants={fadeIn("up", "spring", 1, 1)}>
+                                    <Box sx={{ display: 'flex', justifyContent: 'center' }}>
+                                        {loading && <Box>Loading...</Box>}
+
+                                        <>
+                                            {isLargeScreen ? (
+                                                <Spline
+                                                    onLoad={() => setLoading(false)}
+                                                    scene="https://prod.spline.design/DR0jwlu-IhV5M0Tb/scene.splinecode"
+                                                    style={{ width: 600, height: 600 }}
+                                                />
+                                            ) : (
+                                                <Spline
+                                                    onLoad={() => setLoading(false)}
+                                                    scene="https://prod.spline.design/DR0jwlu-IhV5M0Tb/scene.splinecode"
+                                                    style={{ width: 300, height: 300 }}
+                                                />
+                                            )}
+                                        </>
+                                    </Box>
+                                </motion.div>
+
+                            </Grid>
                         </Grid>
-
-                        <Grid item xs={12} md={6} sx={{ marginTop: { xs: 0, md: -10 }, paddingLeft: { sm: 0, md: 5 } }}>
-
-                            <Box sx={{ display: 'flex', justifyContent: 'center' }}>
-                                {loading && <Box>Loading...</Box>}
-
-                                <>
-                                    {isLargeScreen ? (
-                                        <Spline
-                                            onLoad={() => setLoading(false)}
-                                            scene="https://prod.spline.design/DR0jwlu-IhV5M0Tb/scene.splinecode"
-                                            style={{ width: 500, height: 500 }}
-                                        />
-                                    ) : (
-                                        <Spline
-                                            onLoad={() => setLoading(false)}
-                                            scene="https://prod.spline.design/DR0jwlu-IhV5M0Tb/scene.splinecode"
-                                            style={{ width: 300, height: 300 }}
-                                        />
-                                    )}
-                                </>
-                            </Box>
-
-                        </Grid>
-                    </Grid>
-                </Container>
+                    </Container>
 
 
-            </Box>
-            <Box sx={{ display: { xs: "none", sm: 'flex' }, justifyContent: 'center', }} >
-                <ScrollDown />
-            </Box>
+                </Box >
+                <Box sx={{ display: { xs: "none", sm: 'flex' }, justifyContent: 'center', }} >
+                    <ScrollDown />
+                </Box>
+            </motion.section>
         </>
     )
 }
