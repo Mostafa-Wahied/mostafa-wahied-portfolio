@@ -65,7 +65,7 @@ const About = () => {
                         borderRadius: `${borderRadius}px`,
                         fontFamily: 'Montserrat',
                         marginTop: 0,
-                        height: { xs: '100vh', md: '100vh' },
+                        height: { md: '100vh' },
                     }}
                 >
                     <Container sx={{
