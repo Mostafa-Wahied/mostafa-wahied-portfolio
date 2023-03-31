@@ -84,7 +84,7 @@ const About = () => {
                                             sx={{
                                                 fontSize: { xs: '2rem', md: '3rem' },
                                                 fontFamily: "Montserrat",
-                                                fontWeight: '500',
+                                                fontWeight: '600',
                                                 color: '#F2F7FB',
                                                 textTransform: 'uppercase',
                                                 // position: 'relative',

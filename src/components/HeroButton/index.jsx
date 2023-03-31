@@ -24,7 +24,7 @@ function HeroButton({ label, id, bg, rightBorderWidth }) {
                 id='background'
                 onClick={() => handleNavClick(id)}
                 sx={{
-                    fontSize: "1rem",
+                    fontSize: "1.1rem",
                     fontFamily: 'Montserrat',
                     fontWeight: 'bold',
                     borderTopWidth: '2px',
@@ -36,7 +36,7 @@ function HeroButton({ label, id, bg, rightBorderWidth }) {
                     position: 'relative',
                     overflow: 'hidden',
                     borderRadius: '0px',
-                    padding: { xs: "0px 15px", sm: "0px 15px", lg: '0px 35px' },
+                    padding: { xs: "0px 10px", sm: "0px 15px", lg: '0px 40px' },
                     color: '#12c2e9',
                     opacity: 0.9,
                     transition: 'all 0.3s ease',

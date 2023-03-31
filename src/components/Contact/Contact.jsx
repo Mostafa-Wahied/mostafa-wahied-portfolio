@@ -99,10 +99,13 @@ const Contact = () => {
                 >
                     <motion.div
                         variants={textVariant()}>
-                        <Typography variant='h3'
+                        <Typography variant='h4'
                             sx={{
                                 display: 'flex',
                                 justifyContent: 'center',
+                                fontFamily: "Montserrat",
+                                fontWeight: '600',
+                                color: 'grey.800',
                             }}
                         >
                             Say Hi

@@ -87,7 +87,6 @@ const ProjectCard = ({
             </Card>
         </motion.div >
     )
-
 }
 
 const Projects = () => {
@@ -115,8 +114,8 @@ const Projects = () => {
                             sx={{
                                 fontSize: { xs: '2rem', md: '3rem' },
                                 fontFamily: "Montserrat",
-                                fontWeight: '500',
-                                color: '#000',
+                                fontWeight: '600',
+                                color: 'grey.800',
                                 textTransform: 'uppercase',
                                 // backgroundImage: gradient2,
                                 // WebkitBackgroundClip: 'text',

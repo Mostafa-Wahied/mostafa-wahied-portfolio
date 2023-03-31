@@ -1,8 +1,11 @@
+
+
 .home__scroll {}
 
 .mouse {
     animation: scroll 2s ease infinite;
 }
+
 
 @keyframes scroll {
     0% {
