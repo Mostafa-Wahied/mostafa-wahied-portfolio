@@ -7,7 +7,7 @@ import About from '../../components/About';
 import { Element, scroller } from 'react-scroll'
 import Projects from '../../components/Projects';
 import "./index.css"
-import AboutCOPY from '../../components/About/AboutCOPY';
+import Contact from '../../components/Contact/Contact';
 
 const Home = () => {
 
@@ -24,7 +24,7 @@ const Home = () => {
                     <About />
                 </Element>
                 <Projects />
-                <Hero />
+                <Contact />
                 <Footer />
             </Box>
         </>

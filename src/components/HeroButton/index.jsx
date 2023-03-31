@@ -70,7 +70,7 @@ function HeroButton({ label, id, bg, rightBorderWidth }) {
                     },
                     '&:hover::after': {
                         opacity: 0,
-                        color: '#000', // add this line to change the color of the text
+                        color: '#000',
                     },
                     '&:hover': {
                         color: '#fff',

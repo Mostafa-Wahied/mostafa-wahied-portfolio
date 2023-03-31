@@ -1,13 +1,11 @@
-import React, { useState, useEffect } from 'react';
-import { AppBar, Box, Toolbar, IconButton, Typography, Menu, Container, Avatar, Button, Tooltip, MenuItem } from '@mui/material';
+import React, { useState } from 'react';
+import { AppBar, Box, Toolbar, IconButton, Menu, Container, Tooltip, MenuItem, Link } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import DescriptionIcon from '@mui/icons-material/Description';
 import logo from '../../assets/mw-logo.png';
 
-
-const pages = ['Home', 'About', 'Projects', 'Contact'];
 
 function Header() {
     const [anchorElNav, setAnchorElNav] = useState(null);
@@ -72,31 +70,37 @@ function Header() {
                             }}
                         >
                             <MenuItem onClick={handleCloseNavMenu}>
-                                <IconButton
-                                    size="large"
-                                    aria-label="GitHub"
-                                    onClick={() => window.open('https://github.com/Mostafa-Wahied', '_blank')}
-                                >
-                                    <GitHubIcon />
-                                </IconButton>
+                                <Tooltip title="GitHub">
+                                    <IconButton
+                                        size="large"
+                                        aria-label="GitHub"
+                                        onClick={() => window.open('https://github.com/Mostafa-Wahied', '_blank')}
+                                    >
+                                        <GitHubIcon />
+                                    </IconButton>
+                                </Tooltip>
                             </MenuItem>
                             <MenuItem onClick={handleCloseNavMenu}>
-                                <IconButton
-                                    size="large"
-                                    aria-label="LinkedIn"
-                                    onClick={() => window.open('https://www.linkedin.com/in/mostafa-wahied-seattle/', '_blank')}
-                                >
-                                    <LinkedInIcon />
-                                </IconButton>
+                                <Tooltip title="LinkedIn">
+                                    <IconButton
+                                        size="large"
+                                        aria-label="LinkedIn"
+                                        onClick={() => window.open('https://www.linkedin.com/in/mostafa-wahied-seattle/', '_blank')}
+                                    >
+                                        <LinkedInIcon />
+                                    </IconButton>
+                                </Tooltip>
                             </MenuItem>
                             <MenuItem onClick={handleCloseNavMenu}>
-                                <IconButton
-                                    size="large"
-                                    aria-label="Resume"
-                                    onClick={() => window.open('https://docs.google.com/document/d/1_lK_VUy20syt8nbd04T3VDXdAhX7--J5/edit?usp=sharing&ouid=108483175537272506859&rtpof=true&sd=true', '_blank')}
-                                >
-                                    <DescriptionIcon />
-                                </IconButton>
+                                <Tooltip title="Resume">
+                                    <IconButton
+                                        size="large"
+                                        aria-label="Resume"
+                                        onClick={() => window.open('https://drive.google.com/file/d/1e-aiBw-VkXSFyuruK-RBf2rsFcqCUXBs/view?usp=share_link', '_blank')}
+                                    >
+                                        <DescriptionIcon />
+                                    </IconButton>
+                                </Tooltip>
                             </MenuItem>
                         </Menu>
                     </Box>
@@ -109,27 +113,40 @@ function Header() {
 
                     {/* Bigger screen icons */}
                     <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex', gap: 50 }, justifyContent: 'flex-end' }}>
-                        <IconButton
-                            size="large"
-                            aria-label="GitHub"
-                            onClick={() => window.open('https://github.com/Mostafa-Wahied', '_blank')}
-                        >
-                            <GitHubIcon />
-                        </IconButton>
-                        <IconButton
-                            size="large"
-                            aria-label="LinkedIn"
-                            onClick={() => window.open('https://www.linkedin.com/in/mostafa-wahied-seattle/', '_blank')}
-                        >
-                            <LinkedInIcon />
-                        </IconButton>
-                        <IconButton
-                            size="large"
-                            aria-label="Resume"
-                            onClick={() => window.open('https://docs.google.com/document/d/1_lK_VUy20syt8nbd04T3VDXdAhX7--J5/edit?usp=sharing&ouid=108483175537272506859&rtpof=true&sd=true', '_blank')}
-                        >
-                            <DescriptionIcon />
-                        </IconButton>
+                        <Link
+                            href='https://github.com/Mostafa-Wahied'
+                            target="_blank">
+                            <Tooltip title="GitHub">
+                                <IconButton
+                                    size="large"
+                                    aria-label="GitHub"
+                                >
+                                    <GitHubIcon />
+                                </IconButton>
+                            </Tooltip>
+                        </Link>
+                        <Link
+                            href='https://www.linkedin.com/in/mostafa-wahied-seattle/'
+                            target="_blank">
+                            <Tooltip title="LinkedIn">
+                                <IconButton
+                                    size="large"
+                                    aria-label="LinkedIn">
+                                    <LinkedInIcon />
+                                </IconButton>
+                            </Tooltip>
+                        </Link>
+                        <Link
+                            href='https://drive.google.com/file/d/1e-aiBw-VkXSFyuruK-RBf2rsFcqCUXBs/view?usp=share_link'
+                            target="_blank">
+                            <Tooltip title="Resume">
+                                <IconButton
+                                    size="large"
+                                    aria-label="Resume">
+                                    <DescriptionIcon />
+                                </IconButton>
+                            </Tooltip>
+                        </Link>
                     </Box>
 
                 </Toolbar>

@@ -24,7 +24,7 @@ function ScrollDown() {
                 }}
             >
                 <div className='svg-container'>
-                    <svg width="32px" height="32px" version="1.1" viewBox="0 0 700 700"
+                    <svg width="35px" height="35px" version="1.1" viewBox="0 0 700 700"
                         xmlns="http://www.w3.org/2000/svg">
                         <g>
                             <path class="wheel"
@@ -34,7 +34,7 @@ function ScrollDown() {
                         </g>
                     </svg>
                 </div>
-                <span className='home__scroll-name'>
+                {/* <span className='home__scroll-name'>
                     <Typography
                         variant='overline'
                         sx={{
@@ -50,7 +50,7 @@ function ScrollDown() {
                             marginBottom: '0.2rem',
                         }} />
                     </Typography>
-                </span>
+                </span> */}
             </Button>
         </Box>
     )

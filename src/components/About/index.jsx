@@ -2,13 +2,12 @@ import React, { useEffect, useState } from 'react'
 import { Box, Container, Grid, Typography, useMediaQuery } from '@mui/material'
 import Spline from '@splinetool/react-spline';
 import "./index.css"
-import ScrollDown from '../ScrollDown';
 import codeBG from '../../assets/code-bg-edited.png';
 import { motion } from 'framer-motion'
-import { fadeIn, textVariant, staggerContainer, zoomIn, slideIn } from '../../utils/motion.js'
+import { fadeIn, textVariant, staggerContainer } from '../../utils/motion.js'
 
 const About = () => {
-    const [scrolledToAbout, setScrolledToAbout] = useState(false)
+    // const [scrolledToAbout, setScrolledToAbout] = useState(false)
     const [scale, setScale] = useState(0.8)
     const [borderRadius, setBorderRadius] = useState(50)
 
@@ -29,11 +28,11 @@ const About = () => {
                     const newScale = Math.max(0.8, Math.min(distance / maxDistance + 0.8, maxScale))
                     setScale(newScale)
                     setBorderRadius(Math.round(50 - 50 * (newScale - 0.8) / (maxScale - 0.8)))
-                    setScrolledToAbout(true)
+                    // setScrolledToAbout(true)
                 } else {
                     setScale(0.8)
                     setBorderRadius(50)
-                    setScrolledToAbout(false)
+                    // setScrolledToAbout(false)
                 }
             }
         }
@@ -83,7 +82,7 @@ const About = () => {
                                         <Typography
                                             variant={{ xs: 'h3', md: 'h2' }}
                                             sx={{
-                                                fontSize: { xs: '2.2rem', md: '3.5rem' },
+                                                fontSize: { xs: '2rem', md: '3rem' },
                                                 fontFamily: "Montserrat",
                                                 fontWeight: '500',
                                                 color: '#F2F7FB',
@@ -149,7 +148,7 @@ const About = () => {
 
                             <Grid item xs={12} md={6} sx={{ marginTop: { xs: 0, md: -20 }, paddingLeft: { sm: 0, md: 5 } }}>
 
-                                <motion.div variants={fadeIn("up", "spring", 1, 1)}>
+                                <motion.div variants={fadeIn("up", "spring", 0.8, 0.8)}>
                                     <Box sx={{ display: 'flex', justifyContent: 'center' }}>
                                         {loading && <Box>Loading...</Box>}
 
@@ -175,11 +174,8 @@ const About = () => {
                         </Grid>
                     </Container>
 
-
                 </Box >
-                <Box sx={{ display: { xs: "none", sm: 'flex' }, justifyContent: 'center', }} >
-                    <ScrollDown />
-                </Box>
+
             </motion.section>
         </>
     )

@@ -1,16 +1,15 @@
+import React from 'react'
 import { Box, Button, Container, Typography, Card, CardContent, CardMedia, CardActions, CardActionArea, Grid, Tooltip, Chip, IconButton } from '@mui/material'
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LaunchIcon from '@mui/icons-material/Launch';
-import React from 'react'
+import ArrowOutwardIcon from '@mui/icons-material/ArrowOutward';
 import { motion } from 'framer-motion'
 import { fadeIn, textVariant, staggerContainer } from '../../utils/motion.js'
 import { projects } from '../../constants'
 import { codesandboxIcon } from "../..//assets"
 
-
 const gradient = 'linear-gradient(to right, #121FCF 0%, #CF1512 100%)';
 const gradient2 = 'linear-gradient(45deg, #12c2e9, #c471ed, #f64f59)';
-
 
 const ProjectCard = ({
     index,
@@ -49,7 +48,7 @@ const ProjectCard = ({
                     <Typography variant="body2" color="text.secondary">
                         {description}
                     </Typography>
-                    <Typography variant="subtitle1" color="text.secondary">
+                    <Typography variant="subtitle1" color="text.primary" sx={{mt: 1.2, }}>
                         Technologies Used:
                     </Typography>
                     {/* Display technologies used here */}
@@ -71,7 +70,9 @@ const ProjectCard = ({
                     {live !== "" &&
                         <Tooltip title="Live Demo">
                             <IconButton onClick={() => window.open(live, '_blank')}>
-                                <LaunchIcon sx={{ color: 'black' }} />
+
+                                {/* <LaunchIcon sx={{ color: 'black' }} /> */}
+                                <ArrowOutwardIcon sx={{ color: 'black' }} />
                             </IconButton>
                         </Tooltip>
                     }
@@ -96,9 +97,9 @@ const Projects = () => {
             <Container id="projects"
                 sx={{
                     paddingX: { sx: 0, md: 26 },
-                    marginTop: { xs: 5, md: 10 },
+                    marginY: { xs: 5, md: 10 },
                     fontFamily: 'Montserrat',
-                    height: { md: '100vh' },
+                    // height: { md: '100vh' },
                 }}
                 maxWidth
             >
@@ -107,13 +108,12 @@ const Projects = () => {
                     initial='hidden'
                     whileInView="show"
                     viewport={{ once: true, amount: 0.25 }}
-
                 >
                     <motion.div variants={textVariant(0.2)}>
                         <Typography
                             variant={{ xs: 'h3', md: 'h2' }}
                             sx={{
-                                fontSize: { xs: '2.2rem', md: '4rem' },
+                                fontSize: { xs: '2rem', md: '3rem' },
                                 fontFamily: "Montserrat",
                                 fontWeight: '500',
                                 color: '#000',
@@ -121,18 +121,17 @@ const Projects = () => {
                                 // backgroundImage: gradient2,
                                 // WebkitBackgroundClip: 'text',
                                 // WebkitTextFillColor: 'transparent',
-                                fontSize: { xs: '2.2rem', md: '3.5rem' },
                                 paddingY: { xs: 0, md: 2 },
                             }}
                         >
-                            projects
+                            Projects
                         </Typography>
                     </motion.div>
+
                     <Box sx={{
-                        paddingTop: { xs: 0, md: 5 },
+                        paddingTop: { xs: 2, md: 2 },
                     }}>
                         <Grid container spacing={3}>
-
                             {projects.map((project, index) => {
                                 return (
                                     <Grid item xs={12} md={4}>

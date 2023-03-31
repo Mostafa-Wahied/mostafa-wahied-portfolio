@@ -1,18 +1,16 @@
-import React, { useState } from 'react';
-import { Box, Container, Grid, Typography, useMediaQuery, Button } from '@mui/material';
+import React from 'react';
+import { Box, Container, Grid, Typography, Tooltip } from '@mui/material';
 import HeroButton from '../HeroButton';
 import portfolioImage from '../../assets/original.jpg';
 import { motion } from 'framer-motion'
-import { fadeIn, textVariant, staggerContainer } from '../../utils/motion.js'
+import { fadeIn, staggerContainer } from '../../utils/motion.js'
 import "./index.css"
+import ScrollDown from '../ScrollDown';
 
 const gradient = 'linear-gradient(to right, #121FCF 0%, #CF1512 100%)';
 const gradient2 = 'linear-gradient(45deg, #12c2e9, #c471ed, #f64f59)';
 
 const Hero = () => {
-    const [loading, setLoading] = useState(true);
-
-    const isLargeScreen = useMediaQuery('(min-width: 960px)');
 
     return (
         <>
@@ -93,6 +91,13 @@ const Hero = () => {
                     </Grid>
 
                 </Container>
+                {/* Scroll down icon */}
+                <Box sx={{ display: { xs: "none", sm: 'flex' }, justifyContent: 'center', }} >
+                    <Tooltip title="Scroll Down">
+                            <ScrollDown />
+                    </Tooltip>
+                </Box>
+
             </motion.section>
         </>
 
