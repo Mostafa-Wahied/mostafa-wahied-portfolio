@@ -21,7 +21,7 @@ const Hero = () => {
                 viewport={{ once: true, amount: 0.25 }}
 
             >
-                <Container id="projects"
+                <Container id="hero"
                     sx={{
                         px: { sx: 0, md: 30 },
                         pt: { xs: 25, md: 27 },

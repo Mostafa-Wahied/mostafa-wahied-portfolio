@@ -1,4 +1,4 @@
-import { takenote, mastermind, apiExplorer} from "..//assets"
+import { takenote, mastermind, sunbreak} from "..//assets"
 
 export const projects = [
     {
@@ -11,6 +11,15 @@ export const projects = [
         codesandbox: ""
     },
     {
+        name: "Sunbreak",
+        description: "This web app integrates multiple APIs to help users search for outdoor activities, and get real-time weather information",
+        image: sunbreak,
+technologies: ["React", "Vite", "Axios", "Material UI", "JavaScript"],
+        github: "https://github.com/Mostafa-Wahied/Sunbreak",
+        live: "https://sunbreak.netlify.app/",
+        codesandbox:""
+    },
+    {
         name: "Mastermind",
         description: "The Mastermind game web app is a fun and engaging implementation of the classic game of Mastermind.",
         image: mastermind,
@@ -19,13 +28,5 @@ export const projects = [
         live: "https://mastermind-webapp-production.up.railway.app/",
         codesandbox: ""
     },
-    {
-        name: "API Explorer",
-        description: "A simple application that allows you to explore different APIs and visualize their data in various ways.",
-        image: apiExplorer,
-technologies: ["React", "Axios", "Material UI", "Chart.js", "JavaScript"],
-        github: "",
-        live: "",
-        codesandbox:"https://codesandbox.io/s/mw-cw-assessment-forked-wgejlw"
-    },
+
 ]
