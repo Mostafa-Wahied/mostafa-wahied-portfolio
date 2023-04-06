@@ -7,7 +7,7 @@ export const projects = [
         image: takenote,
         technologies: ["Java", "Spring Boot", "Thymeleaf", "MySQL", "Bootstrap", "JavaScript"],
         github: "https://github.com/Mostafa-Wahied/takenote-web-app",
-        live: "",
+        live: "https://takenote-euho.onrender.com/",
         codesandbox: ""
     },
     {
