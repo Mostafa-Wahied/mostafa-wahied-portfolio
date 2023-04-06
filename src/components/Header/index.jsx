@@ -96,7 +96,7 @@ function Header() {
                                     <IconButton
                                         size="large"
                                         aria-label="Resume"
-                                        onClick={() => window.open('https://drive.google.com/file/d/1e-aiBw-VkXSFyuruK-RBf2rsFcqCUXBs/view?usp=share_link', '_blank')}
+                                        onClick={() => window.open('https://drive.google.com/file/d/1fG5uPSBpK8Wv8HVh2B5wNxmDq-Dn-Psk/view?usp=share_link', '_blank')}
                                     >
                                         <DescriptionIcon />
                                     </IconButton>
@@ -137,7 +137,7 @@ function Header() {
                             </Tooltip>
                         </Link>
                         <Link
-                            href='https://drive.google.com/file/d/1e-aiBw-VkXSFyuruK-RBf2rsFcqCUXBs/view?usp=share_link'
+                            href='https://drive.google.com/file/d/1fG5uPSBpK8Wv8HVh2B5wNxmDq-Dn-Psk/view?usp=share_link'
                             target="_blank">
                             <Tooltip title="Resume">
                                 <IconButton

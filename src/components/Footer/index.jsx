@@ -51,7 +51,7 @@ export const Footer = () => {
                     </Tooltip>
                 </Link>
                 <Link
-                    href='https://drive.google.com/file/d/1e-aiBw-VkXSFyuruK-RBf2rsFcqCUXBs/view?usp=share_link'
+                    href='https://drive.google.com/file/d/1fG5uPSBpK8Wv8HVh2B5wNxmDq-Dn-Psk/view?usp=share_link'
                     target="_blank">
                     <Tooltip title="Resume">
                         <IconButton
