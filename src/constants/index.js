@@ -1,4 +1,4 @@
-import { takenote, mastermind, sunbreak} from "..//assets"
+import { takenote, mastermind, sunbreak } from "..//assets"
 
 export const projects = [
     {
@@ -7,17 +7,18 @@ export const projects = [
         image: takenote,
         technologies: ["Java", "Spring Boot", "Thymeleaf", "MySQL", "Bootstrap", "JavaScript"],
         github: "https://github.com/Mostafa-Wahied/takenote-web-app",
-        live: "https://takenote-euho.onrender.com/",
+        live: "https://takenote-web-app-production.up.railway.app/",
+        // live: "https://takenote-euho.onrender.com/",
         codesandbox: ""
     },
     {
         name: "Sunbreak",
         description: "This web app integrates multiple APIs to help users search for outdoor activities, and get real-time weather information",
         image: sunbreak,
-technologies: ["React", "Vite", "Axios", "Material UI", "JavaScript"],
+        technologies: ["React", "Vite", "Axios", "Material UI", "JavaScript"],
         github: "https://github.com/Mostafa-Wahied/Sunbreak",
         live: "https://sunbreak.netlify.app/",
-        codesandbox:""
+        codesandbox: ""
     },
     {
         name: "Mastermind",
