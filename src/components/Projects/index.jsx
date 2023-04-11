@@ -71,8 +71,8 @@ const ProjectCard = ({
                         <Tooltip title="Live Demo">
                             <IconButton onClick={() => window.open(live, '_blank')}>
 
-                                {/* <LaunchIcon sx={{ color: 'black' }} /> */}
-                                <ArrowOutwardIcon sx={{ color: 'black' }} />
+                                <LaunchIcon sx={{ color: 'black' }} />
+                                {/* <ArrowOutwardIcon sx={{ color: 'black' }} /> */}
                             </IconButton>
                         </Tooltip>
                     }
