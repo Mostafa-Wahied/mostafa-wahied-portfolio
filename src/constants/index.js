@@ -29,5 +29,11 @@ export const projects = [
         live: "https://mastermind-webapp-production.up.railway.app/",
         codesandbox: ""
     },
-
 ]
+
+export const resume =
+{
+    resumeLink: "https://drive.google.com/file/d/1sTkG3ZgaM-UxRwF5FfB3bT0OJWSXNgEu/view?usp=sharing"
+}
+
+

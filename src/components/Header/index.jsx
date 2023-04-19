@@ -5,6 +5,7 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import DescriptionIcon from '@mui/icons-material/Description';
 import logo from '../../assets/mw-logo.png';
+import { resume } from '../../constants'
 
 
 function Header() {
@@ -96,7 +97,7 @@ function Header() {
                                     <IconButton
                                         size="large"
                                         aria-label="Resume"
-                                        onClick={() => window.open('https://drive.google.com/file/d/1fG5uPSBpK8Wv8HVh2B5wNxmDq-Dn-Psk/view?usp=share_link', '_blank')}
+                                        onClick={() => window.open(resume.resumeLink)}
                                     >
                                         <DescriptionIcon />
                                     </IconButton>
@@ -137,7 +138,7 @@ function Header() {
                             </Tooltip>
                         </Link>
                         <Link
-                            href='https://drive.google.com/file/d/1fG5uPSBpK8Wv8HVh2B5wNxmDq-Dn-Psk/view?usp=share_link'
+                            href={resume.resumeLink}
                             target="_blank">
                             <Tooltip title="Resume">
                                 <IconButton

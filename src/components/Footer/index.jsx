@@ -2,6 +2,8 @@ import { AppBar, Toolbar, Typography, Link, IconButton, Tooltip } from "@mui/mat
 import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import DescriptionIcon from '@mui/icons-material/Description';
+import { resume } from '../../constants'
+
 import "./index.css"
 
 export const Footer = () => {
@@ -16,9 +18,9 @@ export const Footer = () => {
         }}>
 
             {/* <Toolbar> */}
-                <Typography color="grey.600" variant="overline" sx={{p: 2}}>
-                    Designed & built by Mostafa Wahied
-                </Typography>
+            <Typography color="grey.600" variant="overline" sx={{ p: 2 }}>
+                Designed & built by Mostafa Wahied
+            </Typography>
             {/* </Toolbar> */}
             <Toolbar sx={{
                 display: 'flex',
@@ -51,7 +53,7 @@ export const Footer = () => {
                     </Tooltip>
                 </Link>
                 <Link
-                    href='https://drive.google.com/file/d/1fG5uPSBpK8Wv8HVh2B5wNxmDq-Dn-Psk/view?usp=share_link'
+                    href={resume.resumeLink}
                     target="_blank">
                     <Tooltip title="Resume">
                         <IconButton
