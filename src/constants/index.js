@@ -7,8 +7,8 @@ export const projects = [
         image: takenote,
         technologies: ["Java", "Spring Boot", "Thymeleaf", "MySQL", "Bootstrap", "JavaScript"],
         github: "https://github.com/Mostafa-Wahied/takenote-web-app",
-        live: "https://takenote-web-app-production.up.railway.app/",
-        // live: "https://takenote-euho.onrender.com/",
+        // live: "https://takenote-web-app-production.up.railway.app/",
+        live: "https://takenote-euho.onrender.com/",
         codesandbox: ""
     },
     {
@@ -26,7 +26,8 @@ export const projects = [
         image: mastermind,
         technologies: ["Java", "Spring Boot", "Thymeleaf", "MySQL", "Bootstrap", "JavaScript"],
         github: "https://github.com/Mostafa-Wahied/mastermind-webapp",
-        live: "https://mastermind-webapp-production.up.railway.app/",
+        // live: "https://mastermind-webapp-production.up.railway.app/",
+        live: "https://mastermind-webapp.onrender.com/",
         codesandbox: ""
     },
 ]
