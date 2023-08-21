@@ -1,39 +1,33 @@
 import { useEffect } from 'react';
 
-const fetchProjectsData = async () => {
+const fetchProjectsData = () => {
     const project1URL = 'https://takenote-euho.onrender.com/';
     const project2URL = 'https://mastermind-webapp.onrender.com/';
-    try {
-        const response1 = await fetch(project1URL, { mode: 'no-cors' });
-        if (response1.ok) {
-            console.log('Fetched data from TakeNote');
-        } else {
-            throw new Error('Failed to fetch data from TakeNote');
-        }
 
-        const response2 = await fetch(project2URL, { mode: 'no-cors' });
-        if (response2.ok) {
-            console.log('Fetched data from Mastermind');
-        } else {
-            throw new Error('Failed to fetch data from Mastermind');
-        }
+    fetch(project1URL, { mode: 'no-cors' })
+        .then((response) => {
+            if (response.type === 'opaque') {
+                console.log('Fetched data from TakeNote');
+            }
+        });
 
-    } catch (error) {
-        console.error(error);
-    }
-}
+    fetch(project2URL, { mode: 'no-cors' })
+        .then((response) => {
+            if (response.type === 'opaque') {
+                console.log('Fetched data from Mastermind');
+            }
+        });
+};
 
 export default function Awake() {
-
     useEffect(() => {
-        fetchProjectsData();
+        fetchProjectsData(); // Fetch data immediately when the component mounts
 
         const intervalId = setInterval(() => {
             fetchProjectsData();
-        }, 840000);
+        }, 840000); // 14 minutes
 
-        return () => clearInterval(intervalId);
-
+        return () => clearInterval(intervalId); // Clean up the interval when the component unmounts
     }, []);
 
     return null;
