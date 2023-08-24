@@ -1,4 +1,4 @@
-import { takenote, mastermind, sunbreak } from "..//assets"
+import { takenote, mastermind, sunbreak, fieldcopier } from "..//assets"
 
 export const projects = [
     {
@@ -9,6 +9,15 @@ export const projects = [
         github: "https://github.com/Mostafa-Wahied/takenote-web-app",
         // live: "https://takenote-web-app-production.up.railway.app/",
         live: "https://takenote-euho.onrender.com/",
+        codesandbox: ""
+    },
+    {
+        name: "FieldCopier",
+        description: "A Firefox extension that automates data transfer between systems, improving workflow and efficiency.",
+        image: fieldcopier,
+        technologies: ["JavaScript", "Bootstrap", "HTML", "CSS"],
+        github: "https://github.com/Mostafa-Wahied/copy-fields-extension",
+        live: "",
         codesandbox: ""
     },
     {
@@ -30,6 +39,7 @@ export const projects = [
         live: "https://mastermind-webapp.onrender.com/",
         codesandbox: ""
     },
+    
 ]
 
 export const resume =

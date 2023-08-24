@@ -48,11 +48,11 @@ const ProjectCard = ({
                     <Typography variant="body2" color="text.secondary">
                         {description}
                     </Typography>
-                    <Typography variant="subtitle1" color="text.primary" sx={{mt: 1.2, }}>
+                    {/* <Typography variant="subtitle1" color="text.primary" sx={{mt: 1.2, }}>
                         Technologies Used:
-                    </Typography>
+                    </Typography> */}
                     {/* Display technologies used here */}
-                    <Box sx={{ display: 'flex', flexWrap: 'wrap' }}>
+                    <Box sx={{ display: 'flex', flexWrap: 'wrap', mt: 2 }}>
                         {technologies.map((tech) => (
                             <Chip label={tech} sx={{ m: 0.5 }} />
                         ))}
@@ -95,7 +95,7 @@ const Projects = () => {
         <>
             <Container id="projects"
                 sx={{
-                    paddingX: { sx: 0, md: 26 },
+                    paddingX: { sx: 0, md: 40 },
                     marginY: { xs: 5, md: 10 },
                     fontFamily: 'Montserrat',
                     // height: { md: '100vh' },
@@ -133,7 +133,7 @@ const Projects = () => {
                         <Grid container spacing={3}>
                             {projects.map((project, index) => {
                                 return (
-                                    <Grid item xs={12} md={4}>
+                                    <Grid item xs={12} md={6}>
                                         {/* 
                                         <ProjectCard
                                             key={index}
