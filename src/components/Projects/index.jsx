@@ -7,6 +7,7 @@ import { motion } from 'framer-motion'
 import { fadeIn, textVariant, staggerContainer } from '../../utils/motion.js'
 import { projects } from '../../constants'
 import { codesandboxIcon } from "../..//assets"
+import { Link } from 'react-router-dom';
 
 const gradient = 'linear-gradient(to right, #121FCF 0%, #CF1512 100%)';
 const gradient2 = 'linear-gradient(45deg, #12c2e9, #c471ed, #f64f59)';
@@ -31,59 +32,64 @@ const ProjectCard = ({
                     },
                 }}
             >
-                <CardMedia component="img" image={image} alt='project_image'
-                    sx={{
-                        padding: 1,
-                        transition: 'transform 0.3s',
-                    }}
-                />
-                <CardContent
-                    sx={{
-                        borderTop: '0.5px solid', borderColor: 'rgba(0, 0, 0, 0.1)',
-                    }}
-                >
-                    <Typography gutterBottom variant="h5" component="div">
-                        {name}
-                    </Typography>
-                    <Typography variant="body2" color="text.secondary">
-                        {description}
-                    </Typography>
-                    {/* <Typography variant="subtitle1" color="text.primary" sx={{mt: 1.2, }}>
+
+                <Link to={`/projects/${name}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                    <CardMedia component="img" image={image} alt='project_image'
+                        sx={{
+                            padding: 1,
+                            transition: 'transform 0.3s',
+                        }}
+                    />
+                    <CardContent
+                        sx={{
+                            borderTop: '0.5px solid', borderColor: 'rgba(0, 0, 0, 0.1)',
+                        }}
+                    >
+                        <Typography gutterBottom variant="h5" component="div">
+                            {name}
+                        </Typography>
+                        <Typography variant="body2" color="text.secondary">
+                            {description}
+                        </Typography>
+                        {/* <Typography variant="subtitle1" color="text.primary" sx={{mt: 1.2, }}>
                         Technologies Used:
                     </Typography> */}
-                    {/* Display technologies used here */}
-                    <Box sx={{ display: 'flex', flexWrap: 'wrap', mt: 2 }}>
-                        {technologies.map((tech) => (
-                            <Chip label={tech} sx={{ m: 0.5 }} />
-                        ))}
-                    </Box>
-                </CardContent>
-                <CardActions>
-                    <Box sx={{ flexGrow: 1 }} />
-                    {github !== "" &&
-                        <Tooltip title="GitHub">
-                            <IconButton onClick={() => window.open(github, '_blank')}>
-                                <GitHubIcon sx={{ color: 'black' }} />
-                            </IconButton>
-                        </Tooltip>
-                    }
-                    {live !== "" &&
-                        <Tooltip title="Live Demo">
-                            <IconButton onClick={() => window.open(live, '_blank')}>
+                        {/* Display technologies used here */}
+                        <Box sx={{ display: 'flex', flexWrap: 'wrap', mt: 2 }}>
+                            {technologies.map((tech) => (
+                                <Chip label={tech} sx={{ m: 0.5 }} />
+                            ))}
+                        </Box>
+                    </CardContent>
+                    <Link>
+                        <CardActions>
+                            <Box sx={{ flexGrow: 1 }} />
+                            {github !== "" &&
+                                <Tooltip title="GitHub">
+                                    <IconButton onClick={() => window.open(github, '_blank')}>
+                                        <GitHubIcon sx={{ color: 'black', fontSize: 32 }} />
+                                    </IconButton>
+                                </Tooltip>
+                            }
+                            {live !== "" &&
+                                <Tooltip title="Live Demo">
+                                    <IconButton onClick={() => window.open(live, '_blank')}>
 
-                                <LaunchIcon sx={{ color: 'black' }} />
-                                {/* <ArrowOutwardIcon sx={{ color: 'black' }} /> */}
-                            </IconButton>
-                        </Tooltip>
-                    }
-                    {codesandbox !== "" &&
-                        <Tooltip title="CodeSandBox">
-                            <IconButton onClick={() => window.open(codesandbox, '_blank')}>
-                                <img src={codesandboxIcon} alt="codesandbox" width={22} height={22} />
-                            </IconButton>
-                        </Tooltip>
-                    }
-                </CardActions>
+                                        <LaunchIcon sx={{ color: 'black', fontSize: 32 }} />
+                                        {/* <ArrowOutwardIcon sx={{ color: 'black' }} /> */}
+                                    </IconButton>
+                                </Tooltip>
+                            }
+                            {codesandbox !== "" &&
+                                <Tooltip title="CodeSandBox">
+                                    <IconButton onClick={() => window.open(codesandbox, '_blank')}>
+                                        <img src={codesandboxIcon} alt="codesandbox" width={22} height={22} />
+                                    </IconButton>
+                                </Tooltip>
+                            }
+                        </CardActions>
+                    </Link>
+                </Link>
             </Card>
         </motion.div >
     )
