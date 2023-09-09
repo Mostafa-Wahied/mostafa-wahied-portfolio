@@ -49,7 +49,7 @@ const ProjectPage = () => {
                     <Header />
                     <Container id="projects"
                         sx={{
-                            paddingX: { sx: 0, md: 40 },
+                            paddingX: { sx: 0, md: 20, lg: 40 },
                             marginY: { xs: 5, md: 10 },
                             fontFamily: 'Montserrat',
                             pt: "4rem",
@@ -311,18 +311,24 @@ const ProjectPage = () => {
                                                     justifyContent: "center",
                                                     marginTop: "2rem",
                                                     backgroundColor: "#fefefe",
-                                                    px: { xs: "1.5rem", sm: "2rem", md: "5rem" },
-                                                    py: { xs: "8rem" }
+                                                    px: { xs: "0.8rem", sm: "2rem", md: "5rem" },
+                                                    py: { xs: "2rem", md: "5rem", lg: "5rem" }
                                                 }}
                                             >
-                                                <img
+                                                <Box
+                                                    component="img"
                                                     src={project.screenshots[1]}
-                                                    style={{
-                                                        width: "100%", height: "auto",
-                                                        border: '12px solid #444', // Add a border to create a frame-like appearance
-                                                        borderRadius: '18px', // Adjust the border radius as needed
-                                                        maxWidth: '100%', // Ensure the image fits within the container
-                                                        boxShadow: '0 10px 15px rgba(0, 0, 0, 0.1)',
+                                                    alt={project.name}
+                                                    sx={{
+                                                        border: {
+                                                            xs: '6px solid #444',
+                                                            md: '8px solid #444',
+                                                            lg: '12px solid #444',
+                                                            width: "100%", height: "auto",
+                                                            borderRadius: '18px',
+                                                            maxWidth: '100%', // Ensure the image fits within the container
+                                                            boxShadow: '0 10px 15px rgba(0, 0, 0, 0.1)',
+                                                        },
                                                     }}
                                                 />
                                             </Box>
@@ -335,18 +341,24 @@ const ProjectPage = () => {
                                                     justifyContent: "center",
                                                     marginTop: "2rem",
                                                     backgroundColor: "#fefefe",
-                                                    px: { xs: "1.5rem", sm: "2rem", md: "5rem" },
-                                                    py: { xs: "8rem" }
+                                                    px: { xs: "0.8rem", sm: "2rem", md: "5rem" },
+                                                    py: { xs: "2rem", md: "5rem", lg: "5rem" }
                                                 }}
                                             >
-                                                <img
+                                                <Box
+                                                    component="img"
                                                     src={project.screenshots[2]}
-                                                    style={{
-                                                        width: "100%", height: "auto",
-                                                        border: '12px solid #444', // Add a border to create a frame-like appearance
-                                                        borderRadius: '18px', // Adjust the border radius as needed
-                                                        maxWidth: '100%', // Ensure the image fits within the container
-                                                        boxShadow: '0 10px 15px rgba(0, 0, 0, 0.1)',
+                                                    alt={project.name}
+                                                    sx={{
+                                                        border: {
+                                                            xs: '6px solid #444',
+                                                            md: '8px solid #444',
+                                                            lg: '12px solid #444',
+                                                            width: "100%", height: "auto",
+                                                            borderRadius: '18px',
+                                                            maxWidth: '100%', // Ensure the image fits within the container
+                                                            boxShadow: '0 10px 15px rgba(0, 0, 0, 0.1)',
+                                                        },
                                                     }}
                                                 />
                                             </Box>
