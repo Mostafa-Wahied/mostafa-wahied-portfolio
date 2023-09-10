@@ -44,7 +44,7 @@ export const projects = [
 
 export const resume =
 {
-    resumeLink: "https://drive.google.com/file/d/1RKKBEuEuODZR-o4v0-SCxCFoTvR5fx7A/view?usp=sharing"
+    resumeLink: "https://drive.google.com/file/d/1eIr4QfnZBbgiCPpZih6HrgdTb1uCf1q1/view?usp=drive_link"
 }
 
 
