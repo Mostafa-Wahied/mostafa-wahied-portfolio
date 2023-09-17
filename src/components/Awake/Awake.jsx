@@ -11,12 +11,12 @@ const fetchProjectsData = () => {
             }
         });
 
-    fetch(project2URL, { mode: 'no-cors' })
-        .then((response) => {
-            if (response.type === 'opaque') {
-                console.log('Fetched data from Mastermind');
-            }
-        });
+    // fetch(project2URL, { mode: 'no-cors' })
+    //     .then((response) => {
+    //         if (response.type === 'opaque') {
+    //             console.log('Fetched data from Mastermind');
+    //         }
+    //     });
 };
 
 export default function Awake() {
