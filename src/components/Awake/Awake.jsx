@@ -2,7 +2,8 @@ import { useEffect } from 'react';
 
 const fetchProjectsData = () => {
     const project1URL = 'https://takenote-euho.onrender.com/';
-    const project2URL = 'https://mastermind-webapp.onrender.com/';
+    // const project2URL = 'https://mastermind-webapp.onrender.com/';
+    const project2URL = 'https://mastermind-webapp-kst2.onrender.com/';
 
     fetch(project1URL, { mode: 'no-cors' })
         .then((response) => {
@@ -11,12 +12,12 @@ const fetchProjectsData = () => {
             }
         });
 
-    // fetch(project2URL, { mode: 'no-cors' })
-    //     .then((response) => {
-    //         if (response.type === 'opaque') {
-    //             console.log('Fetched data from Mastermind');
-    //         }
-    //     });
+    fetch(project2URL, { mode: 'no-cors' })
+        .then((response) => {
+            if (response.type === 'opaque') {
+                console.log('Fetched data from Mastermind');
+            }
+        });
 };
 
 export default function Awake() {

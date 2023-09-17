@@ -36,7 +36,8 @@ export const projects = [
         technologies: ["Java", "Spring Boot", "Thymeleaf", "MySQL", "Bootstrap", "JavaScript"],
         github: "https://github.com/Mostafa-Wahied/mastermind-webapp",
         // live: "https://mastermind-webapp-production.up.railway.app/",
-        live: "https://mastermind-webapp.onrender.com/",
+        // live: "https://mastermind-webapp.onrender.com/",
+        live: "https://mastermind-webapp-kst2.onrender.com/",
         codesandbox: ""
     },
     
