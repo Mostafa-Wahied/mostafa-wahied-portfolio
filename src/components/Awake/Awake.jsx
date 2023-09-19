@@ -1,7 +1,8 @@
 import { useEffect } from 'react';
 
 const fetchProjectsData = () => {
-    const project1URL = 'https://takenote-euho.onrender.com/';
+    // const project1URL = 'https://takenote-euho.onrender.com/';
+    const project1URL = 'https://takenote-qjkn.onrender.com/';
     // const project2URL = 'https://mastermind-webapp.onrender.com/';
     const project2URL = 'https://mastermind-webapp-kst2.onrender.com/';
 
