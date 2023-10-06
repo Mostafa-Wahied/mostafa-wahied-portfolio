@@ -285,6 +285,8 @@ const Project = () => {
                                             my: "0rem",
                                             backgroundColor: "#fefefe",
                                             p: { xs: "1.5rem", sm: "2rem", md: "5rem" },
+                                            boxShadow: '0 10px 15px rgba(0, 0, 0, 0.1)',
+
                                         }}
                                     >
                                         <Grid item xs={12} sx={{ mb: "1rem" }}>
@@ -311,7 +313,8 @@ const Project = () => {
                                                     marginTop: "2rem",
                                                     backgroundColor: "#fefefe",
                                                     px: { xs: "0.8rem", sm: "2rem", md: "5rem" },
-                                                    py: { xs: "2rem", md: "5rem", lg: "5rem" }
+                                                    py: { xs: "2rem", md: "5rem", lg: "5rem" },
+                                                    boxShadow: '0 10px 15px rgba(0, 0, 0, 0.1)',
                                                 }}
                                             >
                                                 <Box
@@ -341,7 +344,8 @@ const Project = () => {
                                                     marginTop: "2rem",
                                                     backgroundColor: "#fefefe",
                                                     px: { xs: "0.8rem", sm: "2rem", md: "5rem" },
-                                                    py: { xs: "2rem", md: "5rem", lg: "5rem" }
+                                                    py: { xs: "2rem", md: "5rem", lg: "5rem" },
+                                                    boxShadow: '0 10px 15px rgba(0, 0, 0, 0.1)',
                                                 }}
                                             >
                                                 <Box
