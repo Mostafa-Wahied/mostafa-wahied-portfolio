@@ -1,7 +1,7 @@
 import { Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
 import Awake from './components/Awake/Awake';
-import ProjectPage from './components/ProjectPage/ProjectPage';
+import ProjectPage from './pages/Projects/index';
 
 function App() {
 

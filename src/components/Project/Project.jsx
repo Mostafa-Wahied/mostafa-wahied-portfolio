@@ -9,7 +9,7 @@ import { useEffect } from "react";
 import { motion, AnimatePresence } from 'framer-motion';
 import LaunchIcon from '@mui/icons-material/Launch';
 
-const ProjectPage = () => {
+const Project = () => {
 
     const fadeIn = {
         hidden: { opacity: 0 },
@@ -46,10 +46,9 @@ const ProjectPage = () => {
                         // padding: "2rem",
                     }}
                 >
-                    <Header />
                     <Container id="projects"
                         sx={{
-                            paddingX: { sx: 0, md: 20, lg: 40 },
+                            paddingX: { sx: 0, md: 20, xl: 40 },
                             marginY: { xs: 5, md: 10 },
                             fontFamily: 'Montserrat',
                             pt: "4rem",
@@ -424,7 +423,6 @@ const ProjectPage = () => {
 
                         </div>
                     </Container>
-                    <Footer style={{ flexShrink: 0 }} />
                 </Box>
             </motion.div >
 
@@ -440,5 +438,5 @@ const ProjectPage = () => {
 
 }
 
-export default ProjectPage;
+export default Project;
 
