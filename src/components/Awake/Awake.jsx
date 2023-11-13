@@ -2,9 +2,11 @@ import { useEffect } from 'react';
 
 const fetchProjectsData = () => {
     // const project1URL = 'https://takenote-euho.onrender.com/';
-    const project1URL = 'https://takenote-qjkn.onrender.com/';
+    // const project1URL = 'https://takenote-qjkn.onrender.com/';
+    const project1URL = 'https://takenote.tech/';
     // const project2URL = 'https://mastermind-webapp.onrender.com/';
-    const project2URL = 'https://mastermind-webapp-kst2.onrender.com/';
+    // const project2URL = 'https://mastermind-webapp-kst2.onrender.com/';
+    const project2URL = 'https://mastermind.mostafawahied.com/';
 
     fetch(project1URL, { mode: 'no-cors' })
         .then((response) => {
