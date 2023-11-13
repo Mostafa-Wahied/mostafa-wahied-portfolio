@@ -37,7 +37,8 @@ export const projects = [
         github: "https://github.com/Mostafa-Wahied/mastermind-webapp",
         // live: "https://mastermind-webapp-production.up.railway.app/",
         // live: "https://mastermind-webapp.onrender.com/",
-        live: "https://mastermind-webapp-kst2.onrender.com/",
+        // live: "https://mastermind-webapp-kst2.onrender.com/",
+        live: "https://mastermind.mostafawahied.com/",
         codesandbox: ""
     },
     
