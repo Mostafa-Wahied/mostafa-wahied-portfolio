@@ -20,7 +20,8 @@ const ProjectCard = ({
     technologies,
     github,
     live,
-    codesandbox
+    codesandbox,
+    slug,
 }) => {
 
     return (
@@ -33,7 +34,7 @@ const ProjectCard = ({
                 }}
             >
 
-                <Link to={`/projects/${name}`} style={{ textDecoration: 'none', color: 'inherit' }}>
+                <Link to={`/projects/${slug}`} style={{ textDecoration: 'none', color: 'inherit' }}>
                     <CardMedia component="img" image={image} alt='project_image'
                         sx={{
                             padding: 1,

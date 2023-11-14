@@ -24,9 +24,9 @@ const Project = () => {
         }
     }, []);
 
-    const { name } = useParams();
-    console.log(projectPages[name]);
-    const project = projectPages.find(project => project.name === name);
+    const { slug } = useParams();
+    console.log(projectPages[slug]);
+    const project = projectPages.find(project => project.slug === slug);
     console.log(project === undefined);
 
     if (project !== undefined) {
@@ -97,6 +97,14 @@ const Project = () => {
                                         GitHub
                                         <LaunchIcon />
                                     </IconButton>
+                                </Box>
+                            }
+                            {/* GitHub: Private Repository - Contact me for details */}
+                            {project.addtionalText &&
+                                <Box sx={{ px: { xs: "1rem", sm: "1rem", md: "1rem", lg: "15rem" }, }}>
+                                    <Typography variant="button" gutterBottom fontSize={16} color="text.secondary">
+                                        GitHub: Private Repository - Contact me for details
+                                    </Typography>
                                 </Box>
                             }
 

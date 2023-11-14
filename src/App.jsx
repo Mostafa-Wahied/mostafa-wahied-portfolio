@@ -10,7 +10,7 @@ function App() {
       <Awake /> {/* This component pings the projects every 14 minutes to keep them awake */}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/projects/:name" element={<ProjectPage />} />
+        <Route path="/projects/:slug" element={<ProjectPage />} />
       </Routes>
     </>
   )

@@ -1,4 +1,4 @@
-import { takenote, mastermind, sunbreak, fieldcopier } from "..//assets"
+import { takenote, mastermind, sunbreak, fieldcopier, printerAutomation } from "..//assets"
 
 export const projects = [
     {
@@ -9,7 +9,8 @@ export const projects = [
         github: "https://github.com/Mostafa-Wahied/takenote-web-app",
         // live: "https://takenote-euho.onrender.com/",
         live: "https://takenote.tech/",
-        codesandbox: ""
+        codesandbox: "",
+        slug: "takenote",
     },
     {
         name: "FieldCopier",
@@ -18,7 +19,8 @@ export const projects = [
         technologies: ["JavaScript", "Bootstrap", "HTML", "CSS"],
         github: "https://github.com/Mostafa-Wahied/copy-fields-extension",
         live: "",
-        codesandbox: ""
+        codesandbox: "",
+        slug: "fieldcopier",
     },
     {
         name: "Sunbreak",
@@ -27,7 +29,8 @@ export const projects = [
         technologies: ["React", "Vite", "Axios", "Material UI", "JavaScript"],
         github: "https://github.com/Mostafa-Wahied/Sunbreak",
         live: "https://sunbreak.netlify.app/",
-        codesandbox: ""
+        codesandbox: "",
+        slug: "sunbreak",
     },
     {
         name: "Mastermind",
@@ -39,7 +42,18 @@ export const projects = [
         // live: "https://mastermind-webapp.onrender.com/",
         // live: "https://mastermind-webapp-kst2.onrender.com/",
         live: "https://mastermind.mostafawahied.com/",
-        codesandbox: ""
+        codesandbox: "",
+        slug: "mastermind",
+    },
+    {
+        name: " Printer Security Automation",
+        description: "A Python script tool that streamlines the process of updating the web servers passwords for a large fleet of printers.",
+        image: printerAutomation,
+        technologies: ["Python", "Selenuim"],
+        github: "",
+        live: "",
+        codesandbox: "",
+        slug: "printer-automation",
     },
     
 ]

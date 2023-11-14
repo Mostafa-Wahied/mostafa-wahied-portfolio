@@ -1,4 +1,4 @@
-import { takenote, mastermind, sunbreak, fieldcopier, takenoteVideo, takenoteScreenshot1, takenoteScreenshot2, takenoteScreenshot3, takenoteSketch1, takenoteSketch2, takenoteSketch4, sunbreakVideo, mastermindVideo, mastermindScreenshot1, mastermindScreenshot2, mastermindScreenshot3 } from '../assets/index.js';
+import { takenote, mastermind, sunbreak, fieldcopier, takenoteVideo, takenoteScreenshot1, takenoteScreenshot2, takenoteScreenshot3, takenoteSketch1, takenoteSketch2, takenoteSketch4, sunbreakVideo, mastermindVideo, mastermindScreenshot1, mastermindScreenshot2, mastermindScreenshot3, printerAutomation } from '../assets/index.js';
 import { projects } from '../constants/index.js';
 
 export const projectPages = [
@@ -18,7 +18,9 @@ export const projectPages = [
         github: projects[0].github,
         // live: "https://takenote-euho.onrender.com/",
         live: projects[0].live,
-        codesandbox: ""
+        codesandbox: "",
+        addtionalText:"",
+        slug: "takenote",
     },
     {
         name: "FieldCopier",
@@ -33,7 +35,9 @@ export const projectPages = [
         // github: "https://github.com/Mostafa-Wahied/copy-fields-extension",
         github: projects[1].github,
         live: "",
-        codesandbox: ""
+        codesandbox: "",
+        addtionalText:"",
+        slug: "fieldcopier",
     },
     {
         name: "Sunbreak",
@@ -50,7 +54,9 @@ export const projectPages = [
         github: projects[2].github,
         // live: "https://sunbreak.netlify.app/",
         live: projects[2].live,
-        codesandbox: ""
+        codesandbox: "",
+        addtionalText:"",
+        slug: "sunbreak",
     },
     {
         name: "Mastermind",
@@ -67,7 +73,26 @@ export const projectPages = [
         github: projects[3].github,
         // live: "https://mastermind-webapp.onrender.com/",
         live: projects[3].live,
-        codesandbox: ""
+        codesandbox: "",
+        addtionalText:"",
+        slug: "mastermind",
     },
+    {
+        name: " Printer Security Automation",
+        description: "Developed for Xerox's Boeing account, this Python script automates the task of changing passwords for thousands of printers. By leveraging the automation framework Selenium, it provides an efficient, error-reduced method of updating security settings across diverse printer models.",
+        challenge: "Manually updating passwords for a large fleet of printers is time-consuming and prone to errors. The previous update, two years ago, highlighted the need for a more efficient process as it involved thousands of printers across various models.",
+        solution: "This automation tool uses Python and Selenium to interact with printer web servers. It accepts a CSV file of printer details, executes password changes, and logs all actions. Each printer model has its own script to handle layout differences, ensuring a high success rate.",
+        impact: "The tool drastically reduces the time and manpower required for password updates. For a fleet of approximately 30,000 to 40,000 printers, the automation reduced what used to be a multi-month process to a matter of hours, with an estimated 95% success rate in the initial run. Addtionally, it offers detailed logs that aid in troubleshooting and streamline the reprocessing of any unsuccessful password changes.",
+        mainImage: printerAutomation,
+        gifImage: '',
+        sketchImages: [],
+        screenshots: [],
+        technologies: ["Python", "Selenuim"],
+        github: "",
+        live: "",
+        codesandbox: "",
+        addtionalText:"Private Repository - Contact me for details",
+        slug: "printer-automation",
+    }
 
 ]

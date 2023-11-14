@@ -19,3 +19,4 @@ export { default as mastermindVideo } from './mastermind/mastermindVideo.webm';
 export { default as mastermindScreenshot1 } from './mastermind/screenshots/mastermindScreenshot (1).png';
 export { default as mastermindScreenshot2 } from './mastermind/screenshots/mastermindScreenshot (2).png';
 export { default as mastermindScreenshot3 } from './mastermind/screenshots/mastermindScreenshot (3).png';
+export { default as printerAutomation } from './printer_automation/printer_automation.png';
