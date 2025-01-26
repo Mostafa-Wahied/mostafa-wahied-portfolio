@@ -8,7 +8,7 @@ const fetchProjectsData = () => {
     // const project2URL = 'https://mastermind-webapp-kst2.onrender.com/';
     const project2URL = 'https://mastermind.mostafawahied.com/';
 
-    fetch(project1URL)
+    fetch(project1URL, { mode: 'no-cors' })
         .then((response) => {
             if (response.ok) {
                 console.log('Fetched data from TakeNote');
@@ -20,7 +20,7 @@ const fetchProjectsData = () => {
             console.error('Error fetching data from TakeNote:', error);
         });
 
-    fetch(project2URL)
+    fetch(project2URL, { mode: 'no-cors' })
         .then((response) => {
             if (response.ok) {
                 console.log('Fetched data from Mastermind');
