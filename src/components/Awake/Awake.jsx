@@ -8,24 +8,24 @@ const fetchProjectsData = () => {
     // const project2URL = 'https://mastermind-webapp-kst2.onrender.com/';
     const project2URL = 'https://mastermind.mostafawahied.com/';
 
-    fetch(project1URL, { mode: 'no-cors' })
+    fetch(project1URL)
         .then((response) => {
             if (response.ok) {
                 console.log('Fetched data from TakeNote');
             } else {
-                console.error('Failed to fetch data from TakeNote');
+                console.error(`Failed to fetch data from TakeNote: ${response.status} ${response.statusText}`);
             }
         })
         .catch((error) => {
             console.error('Error fetching data from TakeNote:', error);
         });
 
-    fetch(project2URL, { mode: 'no-cors' })
+    fetch(project2URL)
         .then((response) => {
             if (response.ok) {
                 console.log('Fetched data from Mastermind');
             } else {
-                console.error('Failed to fetch data from Mastermind');
+                console.error('Failed to fetch data from Mastermind:', response.status, response.statusText);
             }
         })
         .catch((error) => {
