@@ -32,7 +32,7 @@ const fetchProjectsData = () => {
                     return response.text(); // Fetch the raw response body for debugging
                 })
                 .then((body) => {
-                    console.log(`Response body from ${projectURL}:`, body);
+                    console.log(`Response body from ${projectURL}:`, body.substring(0, 100));
                 })
                 .catch((error) => {
                     console.error(`Error fetching data from ${projectURL}:`, error);
@@ -43,6 +43,9 @@ const fetchProjectsData = () => {
         fetchProject(project1URL);
         fetchProject(project2URL);
     };
+    
+    fetchProjectsData();
+}
 
 export default function Awake() {
     useEffect(() => {
