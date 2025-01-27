@@ -8,30 +8,41 @@ const fetchProjectsData = () => {
     // const project2URL = 'https://mastermind-webapp-kst2.onrender.com/';
     const project2URL = 'https://mastermind.mostafawahied.com/';
 
-    fetch(project1URL, { mode: 'no-cors' })
-        .then((response) => {
-            if (response.ok) {
-                console.log('Fetched data from TakeNote');
-            } else {
-                console.error('Failed to fetch data from TakeNote');
-            }
-        })
-        .catch((error) => {
-            console.error('Error fetching data from TakeNote:', error);
-        });
-
-    fetch(project2URL, { mode: 'no-cors' })
-        .then((response) => {
-            if (response.ok) {
-                console.log('Fetched data from Mastermind');
-            } else {
-                console.error('Failed to fetch data from Mastermind');
-            }
-        })
-        .catch((error) => {
-            console.error('Error fetching data from Mastermind:', error);
-        });
-};
+    const fetchProjectsData = () => {
+        const project1URL = 'https://takenote.tech/';
+        const project2URL = 'https://mastermind.mostafawahied.com/';
+    
+        const fetchProject = (projectURL) => {
+            fetch(projectURL, {
+                method: 'GET',
+                credentials: 'include', // Ensures cookies or authentication headers are sent
+                headers: {
+                    'Content-Type': 'application/json', // Set headers for compatibility
+                },
+            })
+                .then((response) => {
+                    console.log(`Response from ${projectURL}:`, response);
+                    if (response.ok) {
+                        console.log(`Fetched data from ${projectURL}`);
+                    } else {
+                        console.error(
+                            `Failed to fetch data from ${projectURL}: ${response.status} ${response.statusText}`
+                        );
+                    }
+                    return response.text(); // Fetch the raw response body for debugging
+                })
+                .then((body) => {
+                    console.log(`Response body from ${projectURL}:`, body);
+                })
+                .catch((error) => {
+                    console.error(`Error fetching data from ${projectURL}:`, error);
+                });
+        };
+    
+        // Fetch data for both projects
+        fetchProject(project1URL);
+        fetchProject(project2URL);
+    };
 
 export default function Awake() {
     useEffect(() => {
